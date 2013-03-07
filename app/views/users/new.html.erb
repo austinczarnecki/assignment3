@@ -1,11 +1,2 @@
-<%= form_for @user do |f| %>
-<p>
-  <%= f.label :name %> <br />
-  <%= f.text_field :name %>
-</p>
-<p>
-  <%= f.label :email %><br />
-  <%= f.text_field :email %>
-</p>
-  <%= f.submit %>
-<% end %>
+<h1>New User</h1>
+<%= render 'form' #render works with any user file beginning with an underscore %>
