@@ -25,6 +25,4 @@ class UsersController < ApplicationController
     @user.update_attributes(params[:user])
     redirect_to @user
   end
-
-
 end

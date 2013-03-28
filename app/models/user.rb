@@ -4,5 +4,4 @@ class User < ActiveRecord::Base
   has_many :votes
 
   attr_accessible :name, :email
-  
 end
