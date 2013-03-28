@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(params[:user])
-    redirect_to users_path
   end
 
   def edit
