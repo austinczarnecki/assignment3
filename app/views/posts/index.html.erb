@@ -1,22 +1,24 @@
-<h1>Posts</h1>
-
 <table>
   <tr>
-    <th>Vote</th>
-    <th>Title</th>
-    <th>Link</th>
-    <th>Description</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td WIDTH="40"><b>Rank</b></td>
+    <td WIDTH="100"><b>Vote</b></td>
+    <td WIDTH="100"><b>Title</b></td>
+    <td WIDTH="200"><b>Link</b></td>
+    <td WIDTH="200"><b>Description</b></td>
+    <td WIDTH="100"><b>Posted by</b></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
-
+  
+<% postnumber = 1 %>
 <% @posts.each do |post| %>
   <tr>
-    <td><%= link_to 'up', votes_path %>
-        <%= link_to 'down', votes_path %></td>
-    <td><%= post.title %></td>
+    <td><%= postnumber %></td>
+    <% postnumber = postnumber + 1 %>
+    <td> <%= link_to 'up', votes_path %>
+        <%= link_to 'down', votes_path %> </td>
+    <td> <%= post.title %> </td>
     <td>
     <a href=<%= post.link %> ><%= post.link %></a>
     </td>
@@ -31,4 +33,4 @@
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<b><%= link_to 'NEW POST', new_post_path %></b>
